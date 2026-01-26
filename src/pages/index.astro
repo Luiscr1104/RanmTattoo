@@ -1,0 +1,39 @@
+---
+import { Hero } from "../components/Hero";
+import { Navbar } from "../components/Navbar";
+import { Gallery } from "../components/Gallery";
+import { About } from "../components/About";
+import { Process } from "../components/Process";
+import { Testimonials } from "../components/Testimonials";
+import { Contact } from "../components/Contact";
+import { Footer } from "../components/Footer";
+import "../styles/global.css";
+---
+
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Ran Tattoo Art</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Permanent+Marker&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="bg-zinc-950 text-white font-sans">
+		<Navbar client:load />
+		<main>
+			<Hero client:load />
+			<Gallery client:load />
+			<About client:load />
+			<Process client:load />
+			<Testimonials client:load />
+			<Contact client:load />
+		</main>
+		<Footer client:load />
+	</body>
+</html>
