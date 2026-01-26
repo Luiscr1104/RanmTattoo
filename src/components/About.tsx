@@ -3,7 +3,7 @@ import { cn } from "../lib/utils";
 
 export function About() {
     return (
-        <div className="w-full bg-zinc-950 py-20 px-4 flex flex-col items-center justify-center antialiased relative" id="about">
+        <div className="w-full bg-zinc-950 py-20 px-6 flex flex-col items-center justify-center antialiased relative" id="about">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
                 <div className="flex-1">
                     <img

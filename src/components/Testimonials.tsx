@@ -5,8 +5,8 @@ import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
 
 export function Testimonials() {
     return (
-        <div className="h-[40rem] rounded-md flex flex-col antialiased bg-zinc-950 items-center justify-center relative overflow-hidden" id="testimonials">
-            <h2 className="text-4xl md:text-7xl font-bold text-center text-white mb-20 font-graffiti bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500">
+        <div className="min-h-[40rem] py-20 rounded-md flex flex-col antialiased bg-zinc-950 items-center justify-center relative overflow-hidden" id="testimonials">
+            <h2 className="text-4xl md:text-7xl font-bold text-center text-white mb-10 md:mb-20 font-graffiti bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 px-4">
                 Street Rep
             </h2>
             <InfiniteMovingCards
