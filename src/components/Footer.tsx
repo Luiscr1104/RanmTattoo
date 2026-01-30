@@ -4,22 +4,31 @@ import { IconBrandInstagram, IconBrandTwitter, IconBrandFacebook } from "@tabler
 
 export function Footer() {
     return (
-        <footer className="w-full bg-black py-10 flex flex-col items-center justify-center border-t border-zinc-800 relative z-10" id="contact">
-            <div className="flex space-x-6 mb-4">
-                <a href="#" className="text-neutral-500 hover:text-white transition-colors">
-                    <IconBrandInstagram className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-neutral-500 hover:text-white transition-colors">
-                    <IconBrandFacebook className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-neutral-500 hover:text-white transition-colors">
-                    <IconBrandTwitter className="w-6 h-6" />
-                </a>
+        <footer className="w-full bg-zinc-950 py-20 px-4 border-t border-white/5 relative z-10">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="flex flex-col items-center md:items-start space-y-4">
+                    <h2 className="text-xl font-display font-black tracking-tighter">RAN TATTOO</h2>
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-white/30">
+                        © {new Date().getFullYear()} Ran Tattoo Art. Todos los derechos reservados.
+                    </p>
+                </div>
+
+                <div className="flex space-x-12">
+                    <a href="#" className="text-white/40 hover:text-white transition-colors text-[10px] uppercase tracking-[0.3em]">
+                        Instagram
+                    </a>
+                    <a href="#" className="text-white/40 hover:text-white transition-colors text-[10px] uppercase tracking-[0.3em]">
+                        Facebook
+                    </a>
+                    <a href="#" className="text-white/40 hover:text-white transition-colors text-[10px] uppercase tracking-[0.3em]">
+                        Twitter
+                    </a>
+                </div>
+
+                <div className="text-[10px] uppercase tracking-[0.3em] text-white/20">
+                    Diseñado con Precisión
+                </div>
             </div>
-            <p className="text-neutral-500 text-sm">
-                © {new Date().getFullYear()} Ran Tattoo Art. All rights reserved.
-            </p>
-            <div className="absolute bottom-0 w-full bg-gradient-to-t from-zinc-900 to-transparent h-20 pointer-events-none" />
         </footer>
     );
 }

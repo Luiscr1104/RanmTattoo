@@ -3,8 +3,15 @@ import { ParallaxScroll } from "./ui/ParallaxScroll";
 
 export function Gallery() {
     return (
-        <div className="min-h-screen w-full bg-zinc-950 relative flex flex-col items-center justify-center antialiased py-20" id="gallery">
-            <h2 className="text-4xl md:text-7xl font-bold text-center text-white mb-10 font-graffiti bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 px-4">Featured Works</h2>
+        <div className="min-h-screen w-full bg-zinc-950 relative flex flex-col items-center justify-center antialiased py-32" id="gallery">
+            <div className="max-w-7xl mx-auto w-full px-4 mb-20 flex flex-col items-start">
+                <span className="text-[10px] uppercase tracking-[0.5em] text-white/40 mb-4 block font-sans">
+                    01 • Portafolio
+                </span>
+                <h2 className="text-4xl md:text-8xl font-display font-black text-left text-white tracking-tighter">
+                    TRABAJOS<br />SELECCIONADOS
+                </h2>
+            </div>
             <ParallaxScroll images={images} />
         </div>
     );

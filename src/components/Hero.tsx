@@ -1,28 +1,63 @@
 import React from "react";
-import { Spotlight } from "./ui/Spotlight";
+import { motion } from "framer-motion";
 import { cn } from "../lib/utils";
 
 export function Hero() {
     return (
-        <div className="min-h-screen md:h-screen w-full rounded-md flex items-center justify-center bg-zinc-950 antialiased bg-grid-white relative overflow-hidden py-20 md:py-0">
-            <Spotlight
-                className="-top-40 left-0 md:left-60 md:-top-20"
-                fill="white"
-            />
-            <div className="p-4 max-w-7xl mx-auto relative z-10 w-full">
-                <h1 className="text-5xl md:text-9xl font-bold font-graffiti text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 bg-opacity-50 drop-shadow-2xl px-2">
-                    Ran Tattoo Art
-                </h1>
-                <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
-                    Ink as eternal as your story. Specialized in geometric, realism, and fine line tattoo art. Located in the heart of the city.
-                </p>
-                <div className="mt-8 flex justify-center">
-                    <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                        <span className="absolute inset-[-1000%] animate-[shimmer_2s_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-8 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                            Book Appointment
-                        </span>
-                    </button>
+        <div className="min-h-screen w-full flex flex-col items-center justify-center bg-zinc-950 relative overflow-hidden px-4">
+            {/* Background Architectural Elements */}
+            <div className="absolute inset-0 z-0">
+                <div className="absolute top-0 left-0 w-full h-full bg-grid-white" />
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1] }}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/[0.02] rounded-full blur-[120px]"
+                />
+            </div>
+
+            <div className="relative z-10 max-w-7xl mx-auto w-full flex flex-col items-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: [0.19, 1, 0.22, 1] }}
+                    className="flex flex-col items-center"
+                >
+                    <span className="text-[10px] md:text-xs uppercase tracking-[0.5em] text-white/40 mb-8 block font-sans">
+                        Excelencia Artística en Tinta
+                    </span>
+                    <h1 className="text-6xl md:text-[12rem] font-display font-black leading-[0.8] text-center tracking-tighter mb-10">
+                        RAN<br />TATTOO
+                    </h1>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.5, ease: [0.19, 1, 0.22, 1] }}
+                    className="flex flex-col md:flex-row items-center md:items-end justify-between w-full mt-12 gap-8 md:gap-0"
+                >
+                    <p className="font-sans text-sm md:text-lg text-white/60 max-w-md leading-relaxed">
+                        Tinta tan eterna como tu historia. Especialista en arte geométrico, realismo y fine line. Ubicado en el corazón de la ciudad.
+                    </p>
+
+                    <div className="flex flex-col items-center md:items-end">
+                        <button className="group relative px-12 py-5 bg-white text-black font-display text-[10px] font-bold tracking-[0.2em] overflow-hidden transition-all hover:pr-16">
+                            <span className="relative z-10">AGENDAR CITA</span>
+                            <span className="absolute right-0 top-0 bottom-0 w-0 bg-zinc-200 transition-all group-hover:w-full z-0" />
+                            <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                            </div>
+                        </button>
+                    </div>
+                </motion.div>
+            </div>
+
+            {/* Side Labels */}
+            <div className="absolute bottom-12 left-12 hidden lg:block">
+                <div className="flex items-center gap-4 -rotate-90 origin-left">
+                    <div className="w-12 h-[1px] bg-white/20" />
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-white/30 whitespace-nowrap">Est. 2024</span>
                 </div>
             </div>
         </div>

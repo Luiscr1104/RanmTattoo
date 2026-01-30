@@ -5,10 +5,16 @@ import { InfiniteMovingCards } from "./ui/InfiniteMovingCards";
 
 export function Testimonials() {
     return (
-        <div className="min-h-[40rem] py-20 rounded-md flex flex-col antialiased bg-zinc-950 items-center justify-center relative overflow-hidden" id="testimonials">
-            <h2 className="text-4xl md:text-7xl font-bold text-center text-white mb-10 md:mb-20 font-graffiti bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 px-4">
-                Street Rep
-            </h2>
+        <div className="py-32 flex flex-col antialiased bg-zinc-950 items-center justify-center relative overflow-hidden" id="testimonials">
+            <div className="max-w-7xl mx-auto w-full px-4 mb-20">
+                <span className="text-[10px] uppercase tracking-[0.5em] text-white/40 mb-4 block">
+                    04 • Reputación en la Calle
+                </span>
+                <h2 className="text-4xl md:text-8xl font-display font-black text-left text-white tracking-tighter leading-tight">
+                    OPINIONES<br />DE CLIENTES
+                </h2>
+            </div>
+
             <InfiniteMovingCards
                 items={testimonials}
                 direction="right"
@@ -21,31 +27,31 @@ export function Testimonials() {
 const testimonials = [
     {
         quote:
-            "Ran is truly an artist. The precision in his fine line work is unlike anything I've seen. My tattoo healed perfectly and looks like a drawing on my skin.",
+            "Ran es verdaderamente un artista. La precisión en su trabajo de líneas finas no se parece a nada que haya visto. Mi tatuaje sanó perfectamente y parece un dibujo en mi piel.",
         name: "Alex Rivera",
-        title: "Black & Grey Client",
+        title: "Cliente de Black & Grey",
     },
     {
         quote:
-            "Came in for a cover-up and walked out with a masterpiece. He turned a mistake from my youth into something I'm proud to show off every day.",
+            "Vine por una cobertura y salí con una obra maestra. Convirtió un error de mi juventud en algo de lo que estoy orgullosa de mostrar todos los días.",
         name: "Samantha Reed",
-        title: "Cover-up Enthusiast",
+        title: "Entusiasta de Coberturas",
     },
     {
-        quote: "The studio vibes are top-tier. Clean, professional, and edgy as hell. If you want a tattoo that stands out, this is the place.",
+        quote: "Las vibras del estudio son de primer nivel. Limpio, profesional y extremadamente auténtico. Si quieres un tatuaje que destaque, este es el lugar.",
         name: "Marcus Thorne",
-        title: "Geometric Art Collector",
+        title: "Coleccionista de Arte Geométrico",
     },
     {
         quote:
-            "Professional from start to finish. Ran took my vague idea and sketched something better than I could have imagined. Highly recommend.",
+            "Profesional de principio a fin. Ran tomó mi idea vaga y bocetó algo mejor de lo que podría haber imaginado. Muy recomendado.",
         name: "Elena Vance",
-        title: "First-timer",
+        title: "Primera vez",
     },
     {
         quote:
-            "Deep black ink and sharp lines. Exactly what I was looking for. Will be back for my full sleeve next year.",
+            "Tinta negra profunda y líneas nítidas. Exactamente lo que estaba buscando. Volveré por mi manga completa el próximo año.",
         name: "Jordan Smith",
-        title: "Minimalist Fan",
+        title: "Fan del Minimalismo",
     },
 ];

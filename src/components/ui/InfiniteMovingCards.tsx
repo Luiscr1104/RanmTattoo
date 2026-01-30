@@ -73,37 +73,36 @@ export const InfiniteMovingCards = ({
         <div
             ref={containerRef}
             className={cn(
-                "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+                "scroller relative z-20 max-w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]",
                 className
             )}
         >
             <ul
                 ref={scrollerRef}
                 className={cn(
-                    " flex min-w-full shrink-0 gap-4 py-4 w-fit flex-nowrap",
+                    " flex min-w-full shrink-0 gap-12 py-4 w-fit flex-nowrap",
                     start && "animate-scroll ",
                     pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
             >
                 {items.map((item, idx) => (
                     <li
-                        className="w-[350px] max-w-full relative rounded-2xl border border-zinc-800 flex-shrink-0 bg-zinc-900/50 p-6 md:p-10 md:w-[450px] backdrop-blur-sm"
+                        className="w-[400px] max-w-full relative border border-white/5 flex-shrink-0 bg-transparent p-12 md:w-[500px]"
                         key={item.name}
                     >
-                        <blockquote>
-                            <div
-                                aria-hidden="true"
-                                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-                            ></div>
-                            <span className=" relative z-20 text-sm leading-[1.6] text-zinc-300 font-normal italic">
+                        <blockquote className="space-y-8">
+                            <div className="absolute top-8 left-8 text-white/5">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017V14C19.017 11.7909 17.2261 10 15.017 10H14.017V7H15.017C18.883 7 22.017 10.134 22.017 14V21H14.017ZM2.01697 21L2.01697 18C2.01697 16.8954 2.9124 16 4.01697 16H7.01697V14C7.01697 11.7909 5.22606 10 3.01697 10H2.01697V7H3.01697C6.88297 7 10.017 10.134 10.017 14V21H2.01697Z" /></svg>
+                            </div>
+                            <span className="relative z-20 text-lg leading-relaxed text-white font-sans italic pt-8 block">
                                 "{item.quote}"
                             </span>
-                            <div className="relative z-20 mt-6 flex flex-row items-center">
+                            <div className="relative z-20 mt-12 pt-8 border-t border-white/5 flex flex-row items-center">
                                 <span className="flex flex-col gap-1">
-                                    <span className=" text-zinc-200 font-bold font-graffiti text-lg">
+                                    <span className="text-white font-display font-bold text-xs tracking-widest uppercase">
                                         {item.name}
                                     </span>
-                                    <span className=" text-zinc-500 text-sm">
+                                    <span className="text-white/30 text-[10px] uppercase tracking-widest">
                                         {item.title}
                                     </span>
                                 </span>
