@@ -24,8 +24,16 @@ export function Footer() {
                     </a>
                 </div>
 
-                <div className="text-[10px] uppercase tracking-[0.3em] text-white/20">
-                    Diseñado con Precisión
+                <div className="text-[10px] uppercase tracking-[0.3em] text-white/20 flex flex-col items-center md:items-end gap-2">
+                    <span>Diseñado con Precisión</span>
+                    <a
+                        href="https://luisroberto.dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white/40 hover:text-white transition-colors"
+                    >
+                        POR LUISROBERTO.DEV
+                    </a>
                 </div>
             </div>
         </footer>
