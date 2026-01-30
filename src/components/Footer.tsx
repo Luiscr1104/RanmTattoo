@@ -1,6 +1,5 @@
 import React from "react";
 import { cn } from "../lib/utils";
-import { IconBrandInstagram, IconBrandTwitter, IconBrandFacebook } from "@tabler/icons-react";
 
 export function Footer() {
     return (

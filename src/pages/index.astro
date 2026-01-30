@@ -8,6 +8,12 @@ import { Testimonials } from "../components/Testimonials";
 import { Contact } from "../components/Contact";
 import { Footer } from "../components/Footer";
 import "../styles/global.css";
+
+const siteUrl = "https://rantattoo.art";
+const title = "Ran Tattoo Art | Tatuajes de Autor en Ciudad de México";
+const description =
+	"Estudio de tatuajes especializado en arte geométrico, realismo y fine line. Crea piezas únicas con precisión artística y los más altos estándares de higiene.";
+const ogImage = "/images/10.webp";
 ---
 
 <html lang="es" class="dark">
@@ -16,7 +22,33 @@ import "../styles/global.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Ran Tattoo Art | Tatuajes de Autor</title>
+
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta
+			name="keywords"
+			content="tatuajes, tattoo art, ciudad de mexico, fine line, realismo, geometrico, ran tattoo, estudio de tatuajes, tatuajes de autor"
+		/>
+		<meta name="author" content="Ran Tattoo Art" />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href={siteUrl} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={siteUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(ogImage, siteUrl)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={siteUrl} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(ogImage, siteUrl)} />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
